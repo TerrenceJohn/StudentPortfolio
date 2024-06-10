@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #333;
+}
+
+nav {
+  width: 100%;
+  height: 15vh;
+  border-bottom: 1px solid black; /* Use border-bottom for a cleaner look */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem; /* Add some padding for spacing */
+  background-color: rgb(0, 0, 0); /* Set nav background to white */
+}
+
+nav .logo h2 {
+  color: rgb(255, 255, 255); /* Set text color to black for contrast */
+  font-weight: 700; /* Make the logo bold */
+}
+
+nav .logo h2 span {
+  color: red;
+  font-size: 35px;
+}
+
+nav .link ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav .link ul li {
+  margin: 0;
+}
+
+nav .link ul a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+nav .link ul a::before {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: -4px;
+  height: 3.5px;
+  border-radius: 20px;
+  background: red;
+  width: 100%;
+  scale: 0;
+  transition: 0.2s ease-in-out;
+}
+
+nav .link ul a:hover::before {
+  scale: 1;
+}
+
+.main {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 20px;
+  background-color: rgb(255, 255, 255); /* Set main section background to white */
+}
+
+.main .pic {
+  width: 440px; /* Adjust the width to make the image not too big, not too small */
+  transition: 1s ease;
+  border: 2px solid black; /* Add a black border for a minimalist touch */
+  border-radius: 10px; /* Slightly round the corners */
+}
+
+.main .pic:hover {
+  transform: scale(1.3);
+}
+
+.section{
+  margin-top: 150px;
+}
+.main-detail {
+  text-align: left; /* Align text to the left */
+  max-width: 600px; /* Limit the width for better alignment */
+  color: black; /* Set text color to black */
+  margin-left: 100px;
+}
+
+.main-detail p {
+  margin-bottom: 10px;
+  font-size: 1.25rem; /* Increase font size for better readability */
+}
+
+.main-detail .info p {
+  margin-bottom: 10px;
+  font-size: 2.0rem; /* Increase font size for better readability */
+}
+
+.main-detail h1 {
+  margin-bottom: 10px;
+  font-size: 3rem; /* Increase font size for emphasis */
+}
+
+.main-detail h4 {
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Increase font size for emphasis */
+}
+
+.btn {
+  display: flex;
+  gap: 2rem;
+  margin-top: 20px; /* Add margin to position buttons below the text */
+}
+
+.btn-1, .btn-2 {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: red; /* Set button background to red */
+  color: white; /* Set button text color to white */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add slight border radius */
+  font-weight: 600; /* Make button text bold */
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px; /* Add margin to position social icons below the buttons */
+  color: black; /* Set social icons color to black */
+}
+
+.social a {
+  color: inherit; /* Ensure the link color inherits from parent */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.social i {
+  cursor: pointer;
+  font-size: 1.5rem; /* Increase icon size for better visibility */
+}
+
+.social a:hover i {
+  color: #ec0000; /* Change icon color on hover */
+}
+
+.info-me ul li {
+  color: white;
+  line-height: 2.5;
+  transition: color 0.3s ease; /* Add transition for color property */
+}
+
+.card:hover .info-me ul li {
+  color: black; /* Change text color to black on hover */
+}
+
+.btn-1,
+.btn-2 {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: red; /* Set initial button background color */
+  color: white; /* Set initial button text color */
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for background color and transform */
+}
+
+.btn-1:hover,
+.btn-2:hover {
+  background-color: #ff4444; /* Change button background color on hover */
+  transform: scale(1.05); /* Increase button size on hover */
+  transition-delay: 0.1s; /* Add a delay before the transition starts */
+}
+
+i:hover {
+  color: #0c0505;
+}
+
+.title h1 {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.title h1::after {
+  content: " ";
+  height: 4px;
+  width: 230px;
+  background: #f70b0b;
+  display: block;
+  margin: auto;
+}
+
+.services {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Ensure all cards stretch to the same height */
+  margin: 75px auto;
+  text-align: center;
+  gap: 20px; /* Add a gap between the cards for spacing */
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between and within items */
+  align-items: center;
+  flex: 1; /* Ensure all cards take equal space */
+  margin: 0px 20px;
+  padding: 20px 20px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  cursor: pointer;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.card .icon {
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.card h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.card p {
+  color: white;
+  font-size: 17px;
+  line-height: 2.0;
+  padding-bottom: 30px;
+}
+
+.card:hover {
+  background-color: white; /* Change background color to white on hover */
+  transform: translateY(-10px); /* Move the card up a bit on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for all properties */
+}
+
+.card:hover .icon,
+.card:hover h2,
+.card:hover p {
+  color: black; /* Change text color to black on hover */
+}
+
+.images {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Add space below each set of images */
+}
+
+.image-box {
+  flex: 1;
+  border: 2px solid #000; /* Border around each image box */
+  margin: 0 10px; /* Space between the image boxes */
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images img {
+  max-width: 100%;
+  height: 450px;
+  display: block;
+}
+
+footer {
+  height: 10px; /* Adjust the height as needed */
+  background-color: #ffffff; /* Optional: set background color to white */
+}
+
+
+.images.single-image {
+  display: flex;
+  flex-direction: row; /* Change to row to display images side by side */
+  align-items: center;
+  justify-content: center; /* Center the images horizontally */
+  gap: 10px; /* Add gap between the images */
+  margin-top: 20px; /* Add margin to separate from previous content */
+}
+
+.images.single-image .image-box {
+  position: relative; /* Make the image box position relative */
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.images.single-image .image-box:last-child {
+  border: none; /* Remove border for the last image */
+}
+
+.images.single-image .image-box img {
+  max-width: 100%;
+  height: 500px; /* Adjust height as needed */
+  display: block;
+}
+
+.quiz-finals {
+  border: 2px solid #000; /* Change the color and width as desired */
+  padding: 5px; /* Optional: Add padding if you want space between the border and the image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual */
+  margin-left: 635px;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%; /* Ensure it takes up the full viewport width */
+  margin: 0; /* Remove default margin if any */
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+  margin-bottom: 20px;
+}
+
+.container p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container ul li {
+  margin-bottom: 10px;
+}
